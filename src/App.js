@@ -5,6 +5,7 @@ import { Posts } from "./components/Posts";
 import PostData from "./data/data.json";
 import { Pagination } from "./components/Pagination";
 import Search from "./components/Search";
+import Filter from "./components/Filter";
 
 const App = () => {
   // const [posts, setPosts] = useState([]);
@@ -34,7 +35,13 @@ const App = () => {
 
   return (
     <div className="container mt-5">
-      <Search />
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <Search />
+        <div>
+          <Filter />
+        </div>
+      </div>
+
       <h1 className="text-primary mb-3" style={{ marginTop: 5 }}>
         Business List
       </h1>
